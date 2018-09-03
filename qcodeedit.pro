@@ -93,3 +93,6 @@ FORMS += widgets/searchreplace.ui \
         widgets/formatconfig.ui \
         snippets/snippetedit.ui
 
+RESOURCES += \
+    qcodeedit.qrc
+

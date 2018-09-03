@@ -106,9 +106,9 @@ void QFormatScheme::load(const QString& f)
 	m_settings = f;
 
 	QFile settings(f);
-	
+
 	if ( settings.open(QFile::ReadOnly | QFile::Text) )
-	{
+    {
 		QDomDocument doc;
 		doc.setContent(&settings);
 		

@@ -1,5 +1,8 @@
 INCLUDEPATH += \
-    $$PWD
+    $$PWD \
+    $$PWD/document \
+    $$PWD/snippets \
+    $$PWD/widgets
 
 LIBS += \
     -L../qcodeedit -lqcodeedit
