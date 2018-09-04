@@ -297,15 +297,13 @@ void QEditSession::restore(QDataStream& s)
 		
 		s >> d->fileName;
 		s >> d->timeStamp;
-		
-		//qDebug("> %s", qPrintable(d->fileName));
-		
+
 		int cursorCount = 0;
 		
 		s >> cursorCount;
 		
 		bool exist = QFile::exists(d->fileName);
-		QEditor *e = exist ? createEditor() : 0;
+        QEditor *e = exist ? createEditor() : nullptr;
 		
 		if ( e )
 			e->load(d->fileName);
@@ -356,9 +354,11 @@ void QEditSession::restore(QDataStream& s)
 		
 		// TODO : defer. it does not seem to work properly that way
 		// TODO : view size independency (store the first visible line number)
-		e->verticalScrollBar()->setValue(d->scrollY);
-		e->horizontalScrollBar()->setValue(d->scrollX);
-		
+        if(e) {
+            e->verticalScrollBar()->setValue(d->scrollY);
+            e->horizontalScrollBar()->setValue(d->scrollX);
+        }
+
 		if ( e )
 		{
 			connect(e	, SIGNAL( destroyed(QObject*) ),

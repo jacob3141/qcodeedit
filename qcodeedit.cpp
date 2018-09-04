@@ -249,6 +249,10 @@ QPanelLayout* QCodeEdit::panelLayout() const
 */
 QAction* QCodeEdit::addPanel(QPanel *panel, Position pos, bool _add)
 {
+    if(!panel) {
+        return nullptr;
+    }
+
 	panel->attach(m_editor);
 	
 	QAction *a = new QAction(panel->type(), m_editor);
@@ -289,7 +293,12 @@ QAction* QCodeEdit::addPanel(QPanel *panel, Position pos, bool _add)
 */
 QAction* QCodeEdit::addPanel(const QString& name, Position pos, bool _add)
 {
-	return addPanel(QPanel::panel(name, m_editor), pos, _add);
+    QPanel *panel = QPanel::panel(name, m_editor);
+    if(panel) {
+        return addPanel(panel, pos, _add);
+    } else {
+        return nullptr;
+    }
 }
 
 /*!

@@ -54,8 +54,9 @@ QHash<QString, QPanelCreator*>& QPanel::creators()
 
 QPanel* QPanel::panel(const QString& id, QWidget *p)
 {
-	if ( !creators().contains(id) )
-		return 0;
+    QHash<QString, QPanelCreator*> hash = creators();
+    if ( !hash.contains(id) )
+        return nullptr;
 	
 	return creators().value(id)->panel(p);
 }
@@ -75,6 +76,7 @@ static int _panels = 0;
 QPanel::QPanel(QWidget *p)
  : QWidget(p), m_defaultVisibility(true), m_shownOnce(false)
 {
+    m_editor = nullptr;
 	QEditor *e = qobject_cast<QEditor*>(p);
 	
 	if ( e )

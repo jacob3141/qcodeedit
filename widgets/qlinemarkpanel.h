@@ -13,8 +13,7 @@
 **
 ****************************************************************************/
 
-#ifndef _QLINE_MARK_PANEL_H_
-#define _QLINE_MARK_PANEL_H_
+#pragma once
 
 /*!
 	\file qlinemarkpanel.h
@@ -37,7 +36,7 @@ class QCE_EXPORT QLineMarkPanel : public QPanel
 	public:
 		Q_PANEL(QLineMarkPanel, "Line Mark Panel")
 		
-		QLineMarkPanel(QWidget *p = 0);
+        QLineMarkPanel(QWidget *p = nullptr);
 		virtual ~QLineMarkPanel();
 		
 		virtual QString type() const;
@@ -52,6 +51,4 @@ class QCE_EXPORT QLineMarkPanel : public QPanel
 		QList<QRect> m_rects;
 		QList<int> m_lines;
 };
-
-#endif // _QLINE_MARK_PANEL_H_
 

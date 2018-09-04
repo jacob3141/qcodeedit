@@ -13,8 +13,7 @@
 **
 ****************************************************************************/
 
-#ifndef _QPANEL_H_
-#define _QPANEL_H_
+#pragma once
 
 /*!
 	\file qpanel.h
@@ -127,5 +126,3 @@ class QPanelCreator
 #define Q_CREATE_PANEL(T)								\
 	QPanel::panel(Q_PANEL_ID(T))						\
 	
-
-#endif // _QPANEL_H_
