@@ -16,8 +16,6 @@
 #ifndef _QDOCUMENT_LINE_P_H_
 #define _QDOCUMENT_LINE_P_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qdocumentline_p.h
 	\brief Definition of QDocumentLineHandle
@@ -52,7 +50,7 @@ class QDocumentLine;
 class QDocumentBuffer;
 class QDocumentPrivate;
 
-class QCE_EXPORT QDocumentLineHandle
+class QDocumentLineHandle
 {
 	friend class QDocument;
 	friend class QDocumentLine;

@@ -16,7 +16,7 @@
 #ifndef _QGOTO_LINE__DIALOG_H_
 #define _QGOTO_LINE__DIALOG_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qgotodialog.h
@@ -31,7 +31,7 @@
 
 class QEditor;
 
-class QCE_EXPORT QGotoLineDialog : public QDialog, private Ui::GotoDialog
+class  QGotoLineDialog : public QDialog, private Ui::GotoDialog
 {
 	Q_OBJECT
 	

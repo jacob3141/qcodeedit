@@ -25,7 +25,7 @@
 #include <QString>
 #include <QKeySequence>
 
-class QCE_EXPORT QEditorInputBinding : public QEditorInputBindingInterface
+class  QEditorInputBinding : public QEditorInputBindingInterface
 {
 	public:
 		class Command

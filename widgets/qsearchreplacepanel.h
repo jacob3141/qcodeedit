@@ -30,14 +30,12 @@
 class QDocumentLine;
 class QDocumentSearch;
 
-class QCE_EXPORT QSearchReplacePanel : public QPanel, private Ui::SearchReplace
+class  QSearchReplacePanel : public QPanel, private Ui::SearchReplace
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QSearchReplacePanel, "Search Replace Panel")
-		
-		QSearchReplacePanel(QWidget *p = 0);
+    public:
+        QSearchReplacePanel(QWidget *p = nullptr);
 		virtual ~QSearchReplacePanel();
 		
 		virtual QString type() const;

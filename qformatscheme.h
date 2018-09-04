@@ -27,8 +27,6 @@
 	\defgroup language Language framework
 */
 
-#include "qce-config.h"
-
 #include <QVector>
 #include <QObject>
 
@@ -38,7 +36,7 @@ class QSettings;
 class QStringList;
 class QDomElement;
 
-class QCE_EXPORT QFormatScheme : public QObject
+class  QFormatScheme : public QObject
 {
 	Q_OBJECT
 	

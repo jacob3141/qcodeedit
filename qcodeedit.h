@@ -16,8 +16,6 @@
 #ifndef _QCODE_EDIT_H_
 #define _QCODE_EDIT_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qcodeedit.h
 	\brief Definition of the QCodeEdit class
@@ -38,7 +36,7 @@ class QPanelWatcher;
 
 #define Q_COMMAND QList<QGenericArgument>()
 
-class QCE_EXPORT QCodeEdit
+class  QCodeEdit
 {
 	friend class QPanelWatcher;
 	

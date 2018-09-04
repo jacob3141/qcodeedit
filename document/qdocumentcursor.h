@@ -13,10 +13,7 @@
 **
 ****************************************************************************/
 
-#ifndef _QDOCUMENT_CURSOR_H_
-#define _QDOCUMENT_CURSOR_H_
-
-#include "qce-config.h"
+#pragma once
 
 /*!
 	\file qdocumentcursor.h
@@ -33,7 +30,9 @@ class QDocumentLine;
 struct QDocumentSelection;
 class QDocumentCursorHandle;
 
-class QCE_EXPORT QDocumentCursor
+#include <QFlags>
+
+class  QDocumentCursor
 {
 	public:
 		enum MoveFlag
@@ -192,4 +191,3 @@ class QCE_EXPORT QDocumentCursor
 		QDocumentCursorHandle *m_handle;
 };
 
-#endif

@@ -16,7 +16,7 @@
 #ifndef _QDOCUMENT_COMMAND_H_
 #define _QDOCUMENT_COMMAND_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qdocumentcommand.h
@@ -31,7 +31,7 @@ class QDocumentLine;
 class QDocumentLineHandle;
 class QDocumentCursorHandle;
 
-class QCE_EXPORT QDocumentCommand : public QUndoCommand
+class  QDocumentCommand : public QUndoCommand
 {
 	public:
 		enum Command
@@ -106,7 +106,7 @@ class QCE_EXPORT QDocumentCommand : public QUndoCommand
 
 Q_DECLARE_TYPEINFO(QDocumentCommand::TextCommandData, Q_MOVABLE_TYPE);
 
-class QCE_EXPORT QDocumentInsertCommand : public QDocumentCommand
+class  QDocumentInsertCommand : public QDocumentCommand
 {
 	public:
 		QDocumentInsertCommand(	int l, int offset,
@@ -125,7 +125,7 @@ class QCE_EXPORT QDocumentInsertCommand : public QDocumentCommand
 		TextCommandData m_data;
 };
 
-class QCE_EXPORT QDocumentEraseCommand : public QDocumentCommand
+class  QDocumentEraseCommand : public QDocumentCommand
 {
 	public:
 		QDocumentEraseCommand(	int bl, int bo,
@@ -144,7 +144,7 @@ class QCE_EXPORT QDocumentEraseCommand : public QDocumentCommand
 		TextCommandData m_data;
 };
 
-class QCE_EXPORT QDocumentCommandBlock : public QDocumentCommand
+class  QDocumentCommandBlock : public QDocumentCommand
 {
 	public:
 		QDocumentCommandBlock(QDocument *d);

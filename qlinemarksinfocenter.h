@@ -27,7 +27,6 @@
 	\defgroup language Language framework
 */
 
-#include "qce-config.h"
 
 #include <QColor>
 #include <QPixmap>
@@ -89,8 +88,8 @@ typedef QList<QLineMarkHandle> QLineMarkHandleList;
 
 Q_DECLARE_TYPEINFO(QLineMarkHandle, Q_MOVABLE_TYPE);
 
-QCE_EXPORT QDataStream& operator >> (QDataStream& d, QLineMark& m);
-QCE_EXPORT QDataStream& operator << (QDataStream& d, const QLineMark& m);
+ QDataStream& operator >> (QDataStream& d, QLineMark& m);
+ QDataStream& operator << (QDataStream& d, const QLineMark& m);
 
 struct QLineMarkType
 {
@@ -114,7 +113,7 @@ typedef QList<QLineMarkType> QLineMarkTypeList;
 
 Q_DECLARE_TYPEINFO(QLineMarkType, Q_MOVABLE_TYPE);
 
-class QCE_EXPORT QLineMarksInfoCenter : public QObject
+class  QLineMarksInfoCenter : public QObject
 {
 	friend class QEditor;
 	friend class QCodeEdit;

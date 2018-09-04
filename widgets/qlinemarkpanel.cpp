@@ -35,9 +35,6 @@
 #include <QMessageBox>
 #include <QContextMenuEvent>
 
-
-QCE_AUTO_REGISTER(QLineMarkPanel)
-
 /*!
 	\ingroup widgets
 	@{
@@ -60,10 +57,7 @@ QLineMarkPanel::QLineMarkPanel(QWidget *p)
 /*!
 	\brief Empty destructor
 */
-QLineMarkPanel::~QLineMarkPanel()
-{
-	
-}
+QLineMarkPanel::~QLineMarkPanel() { }
 
 /*!
 

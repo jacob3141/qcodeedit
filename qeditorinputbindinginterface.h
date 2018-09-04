@@ -16,8 +16,6 @@
 #ifndef _QEDITOR_INPUT_BINDING_INTERFACE_H_
 #define _QEDITOR_INPUT_BINDING_INTERFACE_H_
 
-#include "qce-config.h"
-
 class QEditor;
 
 class QString;

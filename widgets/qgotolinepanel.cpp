@@ -40,8 +40,6 @@
 	\brief A panel that provide inline goto line functionalities
 */
 
-QCE_AUTO_REGISTER(QGotoLinePanel)
-
 /*!
 	\brief Constructor
 */

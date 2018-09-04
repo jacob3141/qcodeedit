@@ -16,7 +16,7 @@
 #ifndef _QFORMAT_CONFIG_H_
 #define _QFORMAT_CONFIG_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qformatconfig.h
@@ -31,7 +31,7 @@
 
 class QFormatScheme;
 
-class QCE_EXPORT QFormatConfig : public QWidget, private Ui::FormatConfig
+class  QFormatConfig : public QWidget, private Ui::FormatConfig
 {
 	Q_OBJECT
 	

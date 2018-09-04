@@ -27,14 +27,12 @@
 
 class QDocumentLine;
 
-class QCE_EXPORT QFoldPanel : public QPanel
+class  QFoldPanel : public QPanel
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QFoldPanel, "Fold Panel")
-		
-		QFoldPanel(QWidget *p = 0);
+    public:
+        QFoldPanel(QWidget *p = nullptr);
 		virtual ~QFoldPanel();
 		
 		virtual QString type() const;

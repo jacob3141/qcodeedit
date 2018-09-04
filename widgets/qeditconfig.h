@@ -16,7 +16,7 @@
 #ifndef _QEDIT_CONFIG_H_
 #define _QEDIT_CONFIG_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qeditconfig.h
@@ -29,7 +29,7 @@
 
 #include <QWidget>
 
-class QCE_EXPORT QEditConfig : public QWidget, private Ui::EditorConfig
+class  QEditConfig : public QWidget, private Ui::EditorConfig
 {
 	Q_OBJECT
 	

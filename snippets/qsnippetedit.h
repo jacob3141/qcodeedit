@@ -16,7 +16,7 @@
 #ifndef _QSNIPPET_EDIT_H_
 #define _QSNIPPET_EDIT_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qsnippetedit.h
@@ -29,7 +29,7 @@
 class QSnippet;
 class QSnippetManager;
 
-class QCE_EXPORT QSnippetEdit : public QWidget, private Ui::SnippetEdit
+class  QSnippetEdit : public QWidget, private Ui::SnippetEdit
 {
 	Q_OBJECT
 	

@@ -29,13 +29,11 @@
 
 class QDocumentLine;
 
-class QCE_EXPORT QLineMarkPanel : public QPanel
+class QLineMarkPanel : public QPanel
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QLineMarkPanel, "Line Mark Panel")
-		
+    public:
         QLineMarkPanel(QWidget *p = nullptr);
 		virtual ~QLineMarkPanel();
 		

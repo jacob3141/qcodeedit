@@ -16,7 +16,7 @@
 #ifndef _QPANEL_LAYOUT_H_
 #define _QPANEL_LAYOUT_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qpanellayout.h
@@ -30,7 +30,7 @@
 class QPanel;
 class QEditor;
 
-class QCE_EXPORT QPanelLayout : public QLayout
+class  QPanelLayout : public QLayout
 {
 	Q_OBJECT
 	
@@ -56,10 +56,7 @@ class QCE_EXPORT QPanelLayout : public QLayout
 		
 		virtual QLayoutItem *itemAt(int idx) const;
 		virtual QLayoutItem *takeAt(int idx);
-		
-		QString serialized() const;
-		void addSerialized(const QString& layout);
-		
+
 		QList<QPanel*> panels() const;
 		
 	public slots:

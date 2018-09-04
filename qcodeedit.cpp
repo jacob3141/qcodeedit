@@ -80,44 +80,6 @@ class QPanelWatcher : public QObject
 		QCodeEdit *qce;
 };
 
-QStringList __qce_data_path;
-
-/*!
-	\brief Centralized access point to data fetching
-*/
-QString QCE::fetchDataFile(const QString& file)
-{
-	if ( QFileInfo(file).isAbsolute() )
-		return file;
-	
-	foreach ( QString dp, __qce_data_path )
-	{
-		QDir d(dp);
-		
-		if ( d.exists(file) )
-			return d.absoluteFilePath(file);
-	}
-	
-	return file;
-}
-
-/*!
-	\return The list of pathes used by QCE to fetch data
-*/
-QStringList QCE::dataPathes()
-{
-	return __qce_data_path;
-}
-
-/*!
-	\brief Add a path to the list of pathes used to fetch data
-*/
-void QCE::addDataPath(const QString& path)
-{
-	if ( !__qce_data_path.contains(path) )
-		__qce_data_path << path;
-}
-
 QList<QCodeEdit*> QCodeEdit::m_instances;
 
 /*!
@@ -282,23 +244,6 @@ QAction* QCodeEdit::addPanel(QPanel *panel, Position pos, bool _add)
 	}
 
 	return a;
-}
-
-/*!
-	\overload
-	\return Toggle view action for the added panel
-	\param name name of panel to add
-	\param pos position of the panel in the layout
-	\param _add whether to add the show action of the panel to the menu of the editor
-*/
-QAction* QCodeEdit::addPanel(const QString& name, Position pos, bool _add)
-{
-    QPanel *panel = QPanel::panel(name, m_editor);
-    if(panel) {
-        return addPanel(panel, pos, _add);
-    } else {
-        return nullptr;
-    }
 }
 
 /*!

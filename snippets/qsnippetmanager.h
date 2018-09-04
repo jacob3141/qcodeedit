@@ -16,7 +16,7 @@
 #ifndef _QSNIPPET_MANAGER_H_
 #define _QSNIPPET_MANAGER_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qsnippetmanager.h
@@ -29,7 +29,7 @@
 class QSnippet;
 class QSnippetPatternLoader;
 
-class QCE_EXPORT QSnippetManager : public QObject
+class  QSnippetManager : public QObject
 {
 	Q_OBJECT
 	

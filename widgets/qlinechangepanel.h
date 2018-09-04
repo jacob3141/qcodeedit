@@ -30,14 +30,12 @@
 
 class QDocumentLine;
 
-class QCE_EXPORT QLineChangePanel : public QPanel
+class  QLineChangePanel : public QPanel
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QLineChangePanel, "Line Change Panel")
-		
-		QLineChangePanel(QWidget *p = 0);
+    public:
+        QLineChangePanel(QWidget *p = nullptr);
 		virtual ~QLineChangePanel();
 		
 		virtual QString type() const;

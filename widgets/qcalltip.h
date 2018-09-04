@@ -16,7 +16,7 @@
 #ifndef _QCALL_TIP_H_
 #define _QCALL_TIP_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qcalltip.h
@@ -25,7 +25,7 @@
 
 #include <QWidget>
 
-class QCE_EXPORT QCallTip : public QWidget
+class  QCallTip : public QWidget
 {
 	public:
 		QCallTip(QWidget *p = 0);

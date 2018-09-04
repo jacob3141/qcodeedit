@@ -16,7 +16,7 @@
 #ifndef _QSNIPPET_BINDING_H_
 #define _QSNIPPET_BINDING_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qsnippetbinding.h
@@ -27,7 +27,7 @@
 
 class QSnippetManager;
 
-class QCE_EXPORT QSnippetBinding : public QEditorInputBinding
+class  QSnippetBinding : public QEditorInputBinding
 {
 	public:
 		QSnippetBinding(QSnippetManager *manager);

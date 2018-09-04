@@ -16,7 +16,7 @@
 #ifndef _QDOCUMENT_H_
 #define _QDOCUMENT_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qdocument.h
@@ -40,7 +40,7 @@ class QDateTime;
 class QFormatScheme;
 class QLanguageDefinition;
 
-struct QCE_EXPORT QDocumentSelection
+struct  QDocumentSelection
 {
 	int start, end;
 	int startLine, endLine;
@@ -59,7 +59,7 @@ typedef QVector<QDocumentLineHandle*>::const_iterator QDocumentConstIterator;
 Q_DECLARE_METATYPE(QDocumentIterator)
 Q_DECLARE_METATYPE(QDocumentConstIterator)
 
-class QCE_EXPORT QDocument : public QObject
+class  QDocument : public QObject
 {
 	friend class QMatcher;
 	friend class QDocumentPrivate;

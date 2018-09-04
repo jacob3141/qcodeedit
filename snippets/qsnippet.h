@@ -16,7 +16,7 @@
 #ifndef _QSNIPPET_H_
 #define _QSNIPPET_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qsnippet.h
@@ -30,7 +30,7 @@ class QSnippetManager;
 
 #include "qsnippetpatternloader.h"
 
-class QCE_EXPORT QSnippet
+class  QSnippet
 {
 	friend class QSnippetManager;
 	

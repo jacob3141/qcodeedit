@@ -16,8 +16,6 @@
 #ifndef _QCOMPLETION_ENGINE_H_
 #define _QCOMPLETION_ENGINE_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qcompletionengine.h
 	\brief Definition of the QCodeCompletionEngine class.
@@ -35,7 +33,7 @@ class QKeyEvent;
 class QCodeModel;
 class QCodeStream;
 
-class QCE_EXPORT QCodeCompletionEngine : public QObject
+class  QCodeCompletionEngine : public QObject
 {
 	Q_OBJECT
 	

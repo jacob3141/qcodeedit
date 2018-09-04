@@ -16,8 +16,6 @@
 #ifndef _QEDITOR_H_
 #define _QEDITOR_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qeditor.h
 	\brief Definition of the QEditor class
@@ -52,7 +50,7 @@ class QCodeCompletionEngine;
 
 class QEditorInputBindingInterface;
 
-class QCE_EXPORT QEditor : public QAbstractScrollArea
+class  QEditor : public QAbstractScrollArea
 #ifdef _QMDI_
 , public qmdiClient
 #endif

@@ -27,14 +27,12 @@
 
 #include "ui_gotoline.h"
 
-class QCE_EXPORT QGotoLinePanel : public QPanel, private Ui::GotoLine
+class  QGotoLinePanel : public QPanel, private Ui::GotoLine
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QGotoLinePanel, "Goto Line Panel")
-		
-		QGotoLinePanel(QWidget *p = 0);
+    public:
+        QGotoLinePanel(QWidget *p = nullptr);
 		virtual ~QGotoLinePanel();
 		
 		virtual QString type() const;

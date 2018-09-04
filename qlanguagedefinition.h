@@ -16,8 +16,6 @@
 #ifndef _QLANGUAGE_DEFINITION_H_
 #define _QLANGUAGE_DEFINITION_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qlanguagedefinition.h
 	\brief Definition of the QLanguageDefinition class.
@@ -37,7 +35,7 @@ class QDocumentCursor;
 #define QCE_FOLD_OPEN_COUNT(flags) ((flags) & QLanguageDefinition::OpenMask)
 #define QCE_FOLD_CLOSE_COUNT(flags) (((flags) & QLanguageDefinition::CloseMask) >> 12)
 
-class QCE_EXPORT QLanguageDefinition
+class  QLanguageDefinition
 {
 	public:
 		/// Collapse state of a line

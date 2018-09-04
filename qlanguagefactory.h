@@ -27,7 +27,7 @@
 	\defgroup language Language framework
 */
 
-#include "qce-config.h"
+
 
 #include <QHash>
 #include <QObject>
@@ -38,7 +38,7 @@ class QFormatScheme;
 class QLanguageDefinition;
 class QCodeCompletionEngine;
 
-class QCE_EXPORT QLanguageFactory : public QObject
+class  QLanguageFactory : public QObject
 {
 	Q_OBJECT
 	

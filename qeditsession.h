@@ -16,8 +16,6 @@
 #ifndef _QEDIT_SESSION_H_
 #define _QEDIT_SESSION_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qeditsession.h
 	\brief Definition of the QEditSession class.
@@ -37,7 +35,7 @@ class QDocumentCommand;
 
 class QDataStream;
 
-class QCE_EXPORT QEditSession : public QObject
+class  QEditSession : public QObject
 {
 	Q_OBJECT
 	

@@ -76,8 +76,6 @@ static QString escapeCpp(const QString& s, bool rep)
 	\brief A panel that provide inline search/replace functionalities
 */
 
-QCE_AUTO_REGISTER(QSearchReplacePanel)
-
 /*!
 	\brief Constructor
 */

@@ -16,7 +16,7 @@
 #ifndef _QDOCUMENT_SEARCH_H_
 #define _QDOCUMENT_SEARCH_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qdocumentsearch.h
@@ -32,7 +32,7 @@
 
 class QEditor;
 
-class QCE_EXPORT QDocumentSearch
+class  QDocumentSearch
 {
 	Q_DECLARE_TR_FUNCTIONS(QDocumentSearch)
 	

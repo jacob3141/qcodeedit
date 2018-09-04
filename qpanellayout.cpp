@@ -67,8 +67,7 @@ QPanelLayout::QPanelLayout(QEditor *p)
 QPanelLayout::QPanelLayout(const QString& layout, QEditor *p)
  : QLayout(p), m_parent(p)
 {
-	setSpacing(0);
-	addSerialized(layout);
+    setSpacing(0);
 }
 
 /*!
@@ -80,89 +79,6 @@ QPanelLayout::~QPanelLayout()
 	
 	while ( (l = takeAt(0)) )
 		delete l;
-}
-
-/*!
-	\return A serialized layout strucure
-*/
-QString QPanelLayout::serialized() const
-{
-	/*
-		Scheme :
-		
-		QPanelLayout::Position '{' comma-separated list of identifiers '}'
-	*/
-	
-	QHash<int, QString> posMap;
-	
-	for ( int i = 0; i < m_list.size(); ++i )
-	{
-		PanelWrapper *wrapper = m_list.at(i);
-		Position position = wrapper->position;
-		
-		QPanel *panel = qobject_cast<QPanel*>(wrapper->item->widget());
-		
-		if ( !panel )
-			continue;
-		
-		if ( !posMap.contains(position) )
-		{
-			posMap[position] = QString::number(position) + "{" + panel->id() + "}";
-		} else {
-			QString& ref = posMap[position];
-			
-			ref.insert(ref.count() - 2, QString(",") + panel->id());
-		}
-	}
-	
-	return QStringList(posMap.values()).join("");
-}
-
-/*!
-	\brief Add the content of a serialized layout structure
-*/
-void QPanelLayout::addSerialized(const QString& layout)
-{
-	//qDebug("layout : %s", qPrintable(layout));
-	
-	int last = 0, i = 0;
-	bool inList = false;
-	Position position = West;
-	
-	while ( i < layout.length() )
-	{
-		if ( inList )
-		{
-			if ( layout.at(i) == '}' )
-				inList = false;
-			
-			if ( !inList || (layout.at(i) == ',') )
-			{
-				QPanel *panel = QPanel::panel(layout.mid(last, i - last), m_parent);
-				
-				if ( panel )
-				{
-					panel->attach(m_parent);
-					addWidget(panel, position);
-					
-					//qDebug("\tpanel : %s", qPrintable(layout.mid(last, i - last)));
-				}
-				
-				last = i + 1;
-			}
-		} else if ( layout.at(i) == '{' ) {
-			inList = true;
-			position = Position(layout.mid(last, i - last).toInt());
-			
-			//qDebug("position : %i [%s]", position, qPrintable(layout.mid(last, i - last)));
-			
-			last = i + 1;
-		}
-		
-		++i;
-	}
-	
-	update();
 }
 
 /*!

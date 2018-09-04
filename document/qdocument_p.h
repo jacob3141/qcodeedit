@@ -16,7 +16,7 @@
 #ifndef _QDOCUMENT_P_H_
 #define _QDOCUMENT_P_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qdocument_p.h
@@ -51,7 +51,7 @@ Q_DECLARE_TYPEINFO(QDocumentSelection, Q_PRIMITIVE_TYPE);
 
 #include "qdocumentcursor_p.h"
 
-class QCE_EXPORT QDocumentPrivate
+class  QDocumentPrivate
 {
 	friend class QEditConfig;
 	

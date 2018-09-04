@@ -16,7 +16,7 @@
 #ifndef _QRELIABLE_FILE_WATCH_H_
 #define _QRELIABLE_FILE_WATCH_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qreliablefilewatch.h
@@ -28,7 +28,7 @@
 #include <QPointer>
 #include <QFileSystemWatcher>
 
-class QCE_EXPORT QReliableFileWatch : protected QFileSystemWatcher
+class  QReliableFileWatch : protected QFileSystemWatcher
 {
 	friend class QPointer<QReliableFileWatch>;
 	

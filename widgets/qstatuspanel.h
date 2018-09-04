@@ -29,14 +29,12 @@ class QLabel;
 
 class QDocumentLine;
 
-class QCE_EXPORT QStatusPanel : public QPanel
+class  QStatusPanel : public QPanel
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QStatusPanel, "Status Panel")
-		
-		QStatusPanel(QWidget *p = 0);
+    public:
+        QStatusPanel(QWidget *p = nullptr);
 		virtual ~QStatusPanel();
 		
 		virtual QString type() const;

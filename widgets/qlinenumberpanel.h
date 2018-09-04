@@ -25,14 +25,12 @@
 
 #include "qpanel.h"
 
-class QCE_EXPORT QLineNumberPanel : public QPanel
+class  QLineNumberPanel : public QPanel
 {
 	Q_OBJECT
 	
-	public:
-		Q_PANEL(QLineNumberPanel, "Line Number Panel")
-		
-		QLineNumberPanel(QWidget *p = 0);
+    public:
+        QLineNumberPanel(QWidget *p = nullptr);
 		virtual ~QLineNumberPanel();
 		
 		bool isVerboseMode() const;

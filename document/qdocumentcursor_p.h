@@ -16,8 +16,6 @@
 #ifndef _QDOCUMENT_CURSOR_P_H_
 #define _QDOCUMENT_CURSOR_P_H_
 
-#include "qce-config.h"
-
 /*!
 	\file qdocumentcursor_p.h
 	\brief Definition of QDocumentCursorHandle
@@ -42,11 +40,11 @@ class QDocumentPrivate;
 class QDocumentCommand;
 class QDocumentCommandBlock;
 
-class QCE_EXPORT QDocumentCursorHandle
+class QDocumentCursorHandle
 {
 	friend class QDocumentCursor;
 	friend class QDocumentPrivate;
-	friend class QDocumentCommand;
+        friend class QDocumentCommand;
 	
 	public:
 		enum Flags

@@ -24,7 +24,6 @@
 	\defgroup widgets
 */
 
-#include "qce-config.h"
 
 #include <QHash>
 #include <QWidget>
@@ -36,15 +35,13 @@ class QPaintEvent;
 class QEditor;
 class QPanelCreator;
 
-class QCE_EXPORT QPanel : public QWidget
-{
+class  QPanel : public QWidget {
 	Q_OBJECT
 	
 	public:
-		QPanel(QWidget *p = 0);
+        QPanel(QWidget *p = nullptr);
 		virtual ~QPanel();
-		
-		virtual QString id() const = 0;
+
 		virtual QString type() const = 0;
 		
 		QEditor* editor();
@@ -54,9 +51,6 @@ class QCE_EXPORT QPanel : public QWidget
 		
 		bool defaultVisibility() const;
 		void setDefaultVisibility(bool on);
-		
-		static QPanel* panel(const QString& id, QWidget *p = 0);
-		static void registerCreator(QPanelCreator *c);
 		
 	protected:
 		virtual bool forward(QMouseEvent *e);
@@ -74,55 +68,5 @@ class QCE_EXPORT QPanel : public QWidget
 		
 	private:
 		QPointer<QEditor> m_editor;
-		bool m_defaultVisibility, m_shownOnce;
-		static QHash<QString, QPanelCreator*>& creators();
+        bool m_defaultVisibility, m_shownOnce;
 };
-
-class QPanelCreator
-{
-	public:
-		virtual ~QPanelCreator() {}
-		virtual QString id() const = 0;
-		virtual QPanel* panel(QWidget *p) = 0;
-};
-
-#define Q_PANEL(T, SID)									\
-	public:												\
-	class Creator : public QPanelCreator				\
-	{ 													\
-		public: 										\
-			virtual QString id() const					\
-			{											\
-				return SID;								\
-			}											\
-														\
-			virtual QPanel* panel(QWidget *p)			\
-			{											\
-				return new T(p);						\
-			}											\
-														\
-			static QPanelCreator* instance()			\
-			{											\
-				static Creator global;					\
-				return &global;							\
-			}											\
-														\
-			Creator() {}								\
-			virtual ~Creator() {}						\
-	};													\
-														\
-	QString id() const { return SID; }					\
-														\
-	static void _register()								\
-	{													\
-		QPanel::registerCreator(Creator::instance());	\
-	}													\
-	
-
-#define Q_PANEL_ID(T)									\
-	T::Creator::instance()->id()						\
-	
-
-#define Q_CREATE_PANEL(T)								\
-	QPanel::panel(Q_PANEL_ID(T))						\
-	

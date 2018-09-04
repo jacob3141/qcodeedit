@@ -45,8 +45,6 @@
 	\brief A panel that display some status informations 
 */
 
-QCE_AUTO_REGISTER(QStatusPanel)
-
 /*!
 	\brief Constructor
 */
@@ -97,11 +95,6 @@ void QStatusPanel::editorChange(QEditor *e)
 */
 bool QStatusPanel::paint(QPainter *p, QEditor *e)
 {
-	//qDebug("drawing status panel... [%i, %i, %i, %i]",
-	//		geometry().x(),
-	//		geometry().y(),
-	//		geometry().width(),
-	//		geometry().height());
 	static QPixmap _warn(":/warning.png"), _mod(":/save.png");
 	
 	QString s;

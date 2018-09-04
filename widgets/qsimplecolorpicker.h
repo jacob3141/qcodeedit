@@ -16,7 +16,7 @@
 #ifndef _QSIMPLE_COLOR_PICKER_H_
 #define _QSIMPLE_COLOR_PICKER_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qsimplecolorpicker.h
@@ -25,7 +25,7 @@
 
 #include <QToolButton>
 
-class QCE_EXPORT QSimpleColorPicker : public QToolButton
+class  QSimpleColorPicker : public QToolButton
 {
 	Q_OBJECT
 	

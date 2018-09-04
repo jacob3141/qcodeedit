@@ -10,9 +10,8 @@ QT += xml widgets printsupport gui
 
 DEFINES += _QCODE_EDIT_BUILD_
 
-HEADERS += qce-config.h \
+HEADERS += \
         qeditor.h \
-        qeditorfactory.h \
         qeditorinputbindinginterface.h \
         qeditorinputbinding.h \
         qeditsession.h \
@@ -52,7 +51,6 @@ HEADERS += qce-config.h \
         snippets/qsnippetbinding.h
 
 SOURCES += qeditor.cpp \
-        qeditorfactory.cpp \
         qeditorinputbinding.cpp \
         qeditsession.cpp \
         qcodeedit.cpp \

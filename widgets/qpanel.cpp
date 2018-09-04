@@ -38,37 +38,6 @@
 #include <QApplication>
 
 /*!
-	\ingroup widgets
-	@{
-	
-	\class QPanel
-	\brief Helper class for panels displayed by QCodeEdit
-	
-*/
-
-QHash<QString, QPanelCreator*>& QPanel::creators()
-{
-	static QHash<QString, QPanelCreator*> _c;
-	return _c;
-}
-
-QPanel* QPanel::panel(const QString& id, QWidget *p)
-{
-    QHash<QString, QPanelCreator*> hash = creators();
-    if ( !hash.contains(id) )
-        return nullptr;
-	
-	return creators().value(id)->panel(p);
-}
-
-void QPanel::registerCreator(QPanelCreator *c)
-{
-	creators()[c->id()] = c;
-}
-
-static int _panels = 0;
-
-/*!
 	\brief Constructor
 	
 	If the parent is a text editor, it is automatically connected to the panel
@@ -81,20 +50,12 @@ QPanel::QPanel(QWidget *p)
 	
 	if ( e )
 		attach(e);
-	
-	++_panels;
 }
 
 /*!
 	\brief Destructor
 */
-QPanel::~QPanel()
-{
-	--_panels;
-	
-	//if ( !_panels )
-	//	qDebug("Panels cleared.");
-	
+QPanel::~QPanel() {
 }
 
 /*!

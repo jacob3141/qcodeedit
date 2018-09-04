@@ -16,7 +16,7 @@
 #ifndef _QDOCUMENT_LINE_H_
 #define _QDOCUMENT_LINE_H_
 
-#include "qce-config.h"
+
 
 /*!
 	\file qdocumentline.h
@@ -60,7 +60,7 @@ struct QParenthesis
 
 Q_DECLARE_TYPEINFO(QParenthesis, Q_MOVABLE_TYPE);
 
-class QCE_EXPORT QDocumentLine
+class  QDocumentLine
 {
 	friend class QDocumentLineHandle;
 	friend class QDocumentCursorHandle;
