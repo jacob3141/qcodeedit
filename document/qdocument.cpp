@@ -652,7 +652,7 @@ void QDocument::print(QPrinter *pr)
 	{
 		// TODO: got to temporarily wrap text to fit page size
 		
-		qWarning("temporary wrapping not implementated yet");
+		qWarning("temporary wrapping not implemented yet");
 	}
 	
 	const int lineCount = lines();
@@ -1031,7 +1031,7 @@ void QDocument::setWidthConstraint(int width)
 
 /*!
 	\return the line object at a given line number
-	\param line Text line to acces
+	\param line Text line to access
 */
 QDocumentLine QDocument::line(int line) const
 {
@@ -1721,7 +1721,7 @@ void QDocumentLineHandle::updateWrap() const
 		if ( (minx + sw) >= maxWidth )
 		{
 			//qWarning("Please stop shrinking so aggressively.\nNo attempt will be made to show something decent");
-			// shrinking too aggresively (or too much spaces...) ungraceful fallback
+			// shrinking too aggressively (or too much spaces...) ungraceful fallback
 			
 			indent = idx = 0;
 			minx = rx = x = QDocumentPrivate::m_leftMargin;
@@ -3263,7 +3263,7 @@ void QDocumentLineHandle::draw(	QPainter *p,
 			
 			if ( (xpos + cwidth) > xOffset )
 			{
-				// MUST be done after setting the proper chararcter width!
+				// MUST be done after setting the proper character width!
 				if ( wrapped && (wrap < m_frontiers.count()) && (idx >= m_frontiers.at(wrap).first) )
 				{
 					if ( sellen || leftSel )
@@ -4546,7 +4546,7 @@ void QDocumentCursorHandle::endEditBlock()
 	QDocumentCommandBlock *block = m_blocks.pop();
 	
 	// special trick to prevent double redo() while getting rid of
-	// bugs occuring in when inserting/erasing in overlapping lines
+	// bugs occurring in when inserting/erasing in overlapping lines
 	// inside a command block
 	block->setWeakLock(true);
 	
@@ -6061,7 +6061,7 @@ int QDocumentPrivate::getNextGroupId()
 }
 
 /*!
-	\brief Relase group id
+	\brief Release group id
 */
 void QDocumentPrivate::releaseGroupId(int groupId)
 {
@@ -6615,3 +6615,4 @@ void QDocumentPrivate::emitMarkChanged(QDocumentLineHandle *l, int m, bool on)
 }
 
 /*! @} */
+

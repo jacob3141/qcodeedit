@@ -70,7 +70,7 @@ QLanguageDefinition::~QLanguageDefinition()
 /*!
 	\fn QLanguageDefinition::extensions()
 	
-	\return the file extensions corrseponding to the supported language
+	\return the file extensions corresponding to the supported language
 	
 	\see language()
 	\see QFileInfo::completeSuffix()
@@ -171,3 +171,4 @@ int QLanguageDefinition::blockFlags(QDocument *d, int line, int depth) const
 }
 
 /*! @} */
+
