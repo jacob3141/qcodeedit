@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/jacob3141)
+
 Jacob: Below you'll find Luc's original README from version 2.2.3. I have taken the
 code and made sure it compiles with Qt5 and restructured it a bit to make it work
 with qt-pods.
